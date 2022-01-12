@@ -810,3 +810,29 @@
 // const [one, two, three, ...otherFood] = food;
 
 // console.log(`${one} ${two} ${three} ${otherFood }`);
+
+
+//video 16
+// Destructuring array old methods
+//old way
+// var book = "video",
+//     video = "book";
+
+//     //coppy first into stash
+// var stash = book;// video
+// // swapping variables
+// book = video; //
+// //get book value from stash
+// video = stash;
+
+// console.log(`book is ${book} and video is ${video}`);
+
+
+//new way
+
+var book = "video",
+    video = "book";
+
+[book, video] = [video, book];
+
+console.log(`book is ${book} and video is ${video}`);
