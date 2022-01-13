@@ -830,9 +830,66 @@
 
 //new way
 
-var book = "video",
-    video = "book";
+// var book = "video",
+//     video = "book";
 
-[book, video] = [video, book];
+// [book, video] = [video, book];
 
-console.log(`book is ${book} and video is ${video}`);
+// console.log(`book is ${book} and video is ${video}`);
+
+
+
+//video17
+// const user = {
+//     username: "osama",
+//     city: "cairo",
+//     skills: {
+//         html: "80%",
+//         css: '85%',
+//         js: { one: "vueJs", two: "Reatjs", three: "angular" }
+//     }
+// };
+
+// const { username, city, skills: { html, css, js: { one, two, three } } } = user;
+// console.log(`${username} ${one} ${three}`);
+
+
+//video18
+// const user = {
+//     username: "osama",
+//     city: "cairo",
+//     skills: {
+//         html: "80%",
+//         css: '85%',
+//         js: ["vueJs", "Reatjs", "angular"]
+//     }
+// };
+//before Destructuring
+// function showmyInfo(user) {
+//     console.log(`${user.username} i live ${user.city}`);
+//     console.log(`${user.skills.html} ${user.skills.css}`);
+//     console.log(`${user.skills.js[0]}`);
+// }
+// showmyInfo(user);
+
+
+// after
+// const { username, city, skills: { html, css, js: [one, two, three] } } = user;
+
+// function showmyInfo(user) {
+//     console.log(`${username} i live ${city}`);
+//     console.log(`${html} ${css}`);
+//     console.log(`${one}`);
+// }
+// showmyInfo(user);
+
+//video 20
+// Iterbale (set) (btemna3 takrar)
+
+// let myArray = [1, 2, 3, 4, 4, 4, 5, 2];
+// let myBooks = new Set(myArray);
+
+// console.log(myArray);
+// console.log(myBooks);
+// console.log(...myBooks);
+// console.log([...myBooks]);
