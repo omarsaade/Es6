@@ -884,6 +884,7 @@
 // showmyInfo(user);
 
 //video 20
+//set huwe constructor
 // Iterbale (set) (btemna3 takrar)
 
 // let myArray = [1, 2, 3, 4, 4, 4, 5, 2];
@@ -893,3 +894,75 @@
 // console.log(myBooks);
 // console.log(...myBooks);
 // console.log([...myBooks]);
+
+
+// v21
+// let myBooks = new Set().add('One').add('two').add('three');
+// let myBooks = new Set();
+// myBooks.add('One')
+// myBooks.add('two')
+// myBooks.add('three');
+
+
+// let myBooks = new Set('osama');//o,s, a,m
+// myBooks.add('osama');//osama
+// myBooks.add('O');// bi shilo
+// myBooks.delete('s');
+// myBooks.clear();
+
+// console.log(myBooks);
+// console.log(myBooks.size);
+
+// console.log(myBooks.has("osama"));
+
+
+////////////////////////////
+//v22
+//Map vs Object
+//map btred object
+//el map bte2bal kell anwe3 el baynt bel key(boolen ,function, array ,number...
+//kelshi kelshi w heda el helo fia)
+
+//el regular object ela adim bi7awwel el key la string w heda el shhi
+//habibet albna el map ma bta3mlo
+// w bya32mul override 3al shagle iza keteb nafes el key marten
+//marra string w marra
+// "1" = "osama"  , 1 ="ali"
+
+
+// var user = {};
+// user["username"] = "osama";
+// user.wesbite = "elzero.org";
+// user[10] = "string";
+// user["10"] = "number";
+// console.log(user);
+
+// let myMap = new Map([
+//     ["10", "String"],
+//     [10, "number"],
+//     [false, "boolean"],
+//     [{ a: 1, b: 2 }, "object"],
+//     [function doSomethoing() { }, "function"],
+// ]);
+
+
+// console.log(myMap);
+//////////////////////////////
+
+//video23
+//
+
+
+// console.log(myMap);
+// console.log(`my map element count is ${myMap.size}`);//5
+// console.log(`using get method ${myMap.get("10")}`);//string
+// console.log(`my map element count is ${myMap.get(10)}`);//number
+// console.log(`my map element count is ${myMap.has(false)}`);//true
+
+// console.log(`${myMap.delete(false)}`);//bettir el false
+// console.log(`${myMap.size}`);
+// myMap.clear()
+// console.log(`${myMap.size}`);
+
+
+//video24
