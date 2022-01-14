@@ -966,3 +966,257 @@
 
 
 //video24
+//primitive data type : string , number , boolean , symbol
+//Symnbols ES6 //unique w gayer kabel lel ta3dil
+//kell symbol hata mne5la2o hata law fade huwe ger 3an el tene
+// ka2ano kell wehed 3ando id 5ass
+
+
+// const mySymbol = Symbol();
+// console.log(typeof mySymbol);
+
+// const mySymbolOne = Symbol("Testing");
+// const mySymbolTwo = Symbol("Testing");
+// console.log(mySymbolOne === mySymbolTwo);
+
+// const myNewSymbol = Symbol();
+
+// const myObject = {
+//     username: "Osama el zero",
+//     website: "elzero.org",
+//     ali: "hammo2a",
+//     [myNewSymbol]: "this is hidden from Iteration",
+// }
+// // console.log(myObject);
+
+// for (let val of Object.entries(myObject)) {
+//     console.log(val);
+// }
+// console.log(Object.getOwnPropertyNames(myObject));
+// console.log(Object.keys(myObject));
+// console.log(Object.getOwnPropertySymbols(myObject));
+// console.log(JSON.stringify(myObject));
+
+
+
+
+
+// let obj = {}
+
+// obj[Symbol('a')] = 'a'
+// obj['a'] = 'a'
+// obj[Symbol.for('b')] = 'b'
+// obj['c'] = 'c'
+// obj.d = 'd'
+
+// for (let val of Object.entries(obj)) {
+//     console.log(val)  // logs "c" and "d"
+// }
+
+// console.log(obj);
+
+///////////////////////////////////////////////
+
+//video25
+//ex1
+// const sone = Symbol.for("Testing");// symbol not exist , create it
+// const soneo = Symbol.for("Testing");// symbol is exist , return it
+
+// console.log(sone === sone);
+
+
+//ex2
+// const sone = Symbol.for("one");
+// const soneo = Symbol.for("Two");
+// console.log(sone === soneo);// false
+
+// ex3
+// const sone = Symbol.for("one");
+// const soneo = Symbol.for("one");
+// console.log(sone === soneo);// false
+
+//ex4
+// const sone = Symbol.for("one");
+// const soneo = Symbol.for("two");
+// console.log(Symbol.keyFor(sone));//one
+// console.log(Symbol.keyFor(soneo));//two
+// console.log(sone === soneo);// false
+
+//ex5
+// const sone = Symbol("one");
+// alert(sone) //ES.js:1047 Uncaught TypeError: Cannot convert a Symbol value to a string
+
+//ex6
+// const sone = Symbol("one");
+
+// alert(sone.toString());
+
+//ex7
+// const sone = Symbol("one");
+// console.log(sone.description); // same as key for
+
+//ex8
+////////////////////////////////
+
+
+
+//video 26
+//for each(CurrentVAlue , index , array)
+
+// const arr = ["A", "B", "C", "D", , "F"];
+// for (let i = 0; i < arr.length; i++) {
+// console.log(`${i} - ${arr[i]}`);
+// }
+//
+// console.log(`${"#".repeat(30)}`);
+//
+// arr.forEach((el, i) => {
+// console.log(`${i}- ${el}`);
+// });
+// const arr = ["A", "B", "C", "D", , "F"];
+
+// console.log(`${"#".repeat(30)}`);
+
+// let callbacks = 0;
+
+// arr.forEach((el, i) => {
+//     console.log(`${i} - ${el}`);
+//     callbacks++;
+// });
+// console.log(callbacks);
+// console.log(`${"#".repeat(30)}`);
+
+
+// const arr = ["A", "B", "C", "D", , "F"];
+// function makeTheLoop(element, index) { //same
+//     console.log(`${index} - ${element}`);
+// }
+
+// arr.forEach(makeTheLoop);
+
+
+
+
+//video27
+//forEach(currentkey , Set)
+
+// const mySet = new Set([1, 1, 1, 2, 2, 2, 3, 4, 5]);
+// mySet.forEach(item1 => {
+//     console.log(`${item1}`);
+// });
+
+// console.log(`${"#".repeat(20)}`);
+
+/*
+forEach(Value , key , Map)
+*/
+
+// const myMap = new Map([["A", 1], ["C", 3], ["B", 2]]);
+
+// console.log(myMap);
+
+// myMap.forEach((v, k) => {
+//     console.log(`${k} => ${v}`);
+// });
+
+////////////////////////////////////
+//video28
+// Set
+// -Contain any type of values
+// get elemnents count with .size
+// foreach avaiable to Iterate
+// you can Get its keys
+
+
+
+// let mainObject = { A: 1 }; //kella value li jawa
+// let mySet = new Set([mainObject]);//set btred object
+
+// let objectOne = { B: 2 };
+// let objectTwo = { C: 3 };
+// console.log(mySet);
+// mySet.add(objectOne);
+// mySet.add(objectTwo);
+// console.log(mySet.has(objectOne));//true
+// console.log(mySet.has(objectTwo));//true
+
+
+// mySet.delete(objectOne);
+// console.log(mySet.has(objectOne));
+
+// objectTwo = null;// ma btenshel men el memory hata
+// law sar el reference null
+// console.log(mySet.has(objectTwo));
+
+// console.log(mySet);
+
+// mySet.add("String");
+// mySet.add(12);
+// console.log(mySet);
+
+// mySet.forEach(v => {
+//     console.log(v);
+// });
+
+
+
+////////////////
+//weakset
+//contains only Object
+//you cant use size to get Elemnts Count
+//forEach Not Avaibale to Iterate:takrar
+// /you cant get keys
+
+
+
+
+
+// let mainObject = { A: 1 }; //kella value li jawa
+// let myWeakSet = new WeakSet([mainObject]);//set btred object
+
+// let objectOne = { B: 2 };
+// let objectTwo = { C: 3 };
+
+// myWeakSet.add(objectOne);
+// myWeakSet.add(objectTwo);
+// console.log(myWeakSet.has(objectOne));//true
+// console.log(myWeakSet.has(objectTwo));//true
+
+
+// myWeakSet.delete(objectOne);
+// console.log(myWeakSet.has(objectOne));//false
+
+// objectTwo = null; // hala2 el garabge collector btshila men
+// el memory baad wa2et li2an ma ela reference
+// console.log(myWeakSet.has(objectTwo));//false
+
+// console.log(myWeakSet);
+
+// mySet.add("String");//error bas object
+// mySet.add(12);//errorrrrr
+// console.log(myWeakSet);
+
+// myWeakSet.forEach(v => { //errrorrr
+//     console.log(v);
+// });
+/////////////////////////////////////
+
+
+
+
+//video29
+// Map vs WeakMAp
+// nafes kawe3eed el set wel weakSet
+// MAp
+// weakMAp bte5od object only ka key 
+
+
+
+
+
+
+
+
+
+
+
