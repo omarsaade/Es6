@@ -1208,7 +1208,92 @@ forEach(Value , key , Map)
 // Map vs WeakMAp
 // nafes kawe3eed el set wel weakSet
 // MAp
-// weakMAp bte5od object only ka key 
+// weakMAp bte5od object only ka key
+
+
+
+//video30
+// Iterator & For Loop
+// Iterable => Object Has Symbol Iterator
+// -Object With Interface Designed For Iteration
+// all iterators Has Next() Method that return Result Object
+// the Result Object Has two props
+// ----[1] Value => the next value
+// ----[2] Done => Boolean Value to tell if the Next Value Exists or No
+
+// For...of Loop
+//[1] Call Symbol.Iterator with Next Method
+// [2] save Value inside variable
+//[3]check For Done if its true => Exit The Loop
+
+// let myArray = [1, 2, 3];// fia iteration , built in iterator mehthod by default
+// let myName = "Osama";//fia iteration ....................................
+// let myNumber = 1000;//mafia iteration
+// let myObject = {};//mafi iteration
+
+
+
+// console.log(typeof (myArray[Symbol.iterator]));
+// console.log(typeof (myName[Symbol.iterator]));
+// console.log(typeof (myNumber[Symbol.iterator]));
+// console.log(typeof (myObject[Symbol.iterator]));
+
+// let theItertor = myName[Symbol.iterator]();
+
+// console.log(theItertor);
+
+
+// console.log(theItertor.next());//next method btarje3 object fia 2 prop (value , done)
+// console.log(theItertor.next());
+// console.log(theItertor.next());
+// console.log(theItertor.next());
+// console.log(theItertor.next());
+// console.log(theItertor.next());
+
+
+// for (let char of myName) {
+//     console.log(char);
+// }
+
+// for (const a of myObject) {
+//     console.log(a);
+// }
+
+
+
+////////////////////////////////////////////////////////////
+////// v31
+// implement iterator method
+// for object
+
+// const myObject = {
+//     name: "Osama",
+//     age: 36,
+//     country: "egypt",
+//     favskill: "javascript",
+//     [Symbol.iterator]() {
+//         let step = 0;
+//         let properties = Object.keys(this);
+//         return {
+//             next() {
+//                 return {
+//                     value: myObject[properties[step]],
+//                     done: step++ === properties.length
+//                 }
+//             }
+//         }
+//     }
+
+
+// }
+
+// for (const prop of myObject) {
+//     console.log(prop);
+// }
+
+
+
+
 
 
 
