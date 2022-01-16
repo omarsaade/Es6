@@ -1238,9 +1238,10 @@ forEach(Value , key , Map)
 // console.log(typeof (myNumber[Symbol.iterator]));
 // console.log(typeof (myObject[Symbol.iterator]));
 
-// let theItertor = myName[Symbol.iterator]();
+// let theItertor = myName[Symbol.iterator](); //cz type is function mn7et ()
 
 // console.log(theItertor);
+
 
 
 // console.log(theItertor.next());//next method btarje3 object fia 2 prop (value , done)
@@ -1250,6 +1251,8 @@ forEach(Value , key , Map)
 // console.log(theItertor.next());
 // console.log(theItertor.next());
 
+
+// console.log(theItertor.next().value);//note
 
 // for (let char of myName) {
 //     console.log(char);
@@ -1291,17 +1294,211 @@ forEach(Value , key , Map)
 //     console.log(prop);
 // }
 
+////////////////////////////////////////
+//video32
+
+
+// generator bet create iterator
+
+// function* generateTickets() {
+//     yield 1;
+//     yield 2;
+//     yield 3;
+//     yield 4;
+//     yield 5;
+
+// }
+
+// let iterator = generateTickets();
+// console.log(typeof (iterator));//object
+// console.log(typeof iterator);//object
+// console.log(iterator.next().done); // ma3lume 3amme
+
+
+// console.log(iterator.next().value);
+// console.log("we will do something before Yileding the Next Ticket");
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+// console.log(iterator.next().value);
+
+// let myNumbers = [10, 20, 30, 40, 50];
+
+// function* generateNumbers(nums) {
+//     for (let i = 0; i < nums.length; i++) {
+//         yield nums[i];
+//     }
+// }
+
+// let generator = generateNumbers(myNumbers);
+
+// console.log(generator.next().value);
+// console.log(generator.next().value);
+// console.log(generator.next().value);
+// console.log(generator.next().value);
+// console.log(generator.next().value);
+
+// // ex3
+
+// function* generateNums() {
+
+//     yield* [1, 2, 3, 4, 5, 6];
+//     yield 7;
+// }
+
+// let theGenerator = generateNums();
+
+// console.log(theGenerator.next().value);
+// console.log(theGenerator.next().value);
+// console.log(theGenerator.next().value);
+// console.log(theGenerator.next().value);
+// console.log(theGenerator.next().value);
+// console.log(theGenerator.next().value);
+// console.log(theGenerator.next().value);
+
+
+/////////////////////////////////////////////////////////////////////////
+// video33
+// Generators Part 2
+// functionality & return
+//
+// function orderBook() {
+// window.alert("you clicked on button to order A book");
+// console.log("you clicked on button to order A book");
+//
+// window.alert("you added the book to cart");
+// console.log("you added the book to cart");
+//
+// window.alert("payment is done");
+// console.log("paymnet is done");
+// }
+//
+// let ordering = orderBook();
+
+// function* orderBook() {
+// window.alert("you clicked on Button To order A book");
+// console.log("you clicked on button to order A book");
+//
+// window.alert("you added the book to cart");
+// console.log("you added the book to cart");
+//
+// window.alert("payment is done");
+// console.log("paymnet is done");
+// }
+//
+// let ordering = orderBook();
+
+// function* mySkills() {
+//     yield "HTML";
+//     yield "CSS";
+//     yield "PHP";
+//     yield "Python";
+//     yield "javascript";
+
+// }
+
+// let theSkills = mySkills();// Iterator
+
+// for (const skill of theSkills) {
+//     console.log(skill);
+// }
+// for (const s of mySkills()) {
+//     console.log(s);
+// }
+
+// // Test return
+
+// function* sayNames() {
+//     yield "osama";
+//     yield "ahmed";
+//     return "Sayed"; // bta3ti done true w he el kerse bel return hon
+//     // w hye bt5areb mafhum el genertaor
+//     yield "eman";
+
+// }
+
+// let theNames = sayNames();
+// console.log(theNames.next());
+// console.log(theNames.next());
+// console.log(theNames.next());
+// console.log(theNames.next());
+
+// __________________________________________________
+
+// video34
+// Create InFinite Numbers
+// Generator bye5la2 iterator
+
+// function* createInfinite() { // do not Loop on this
+//     let i = 0;
+//     while (true) { // deyman btfut cz sah deyman
+//         yield i++;
+//     }
+// }
+
+// let infiniteIterator = createInfinite();//iterator
+// console.log(infiniteIterator.next());
+// console.log(infiniteIterator.next());
+// console.log(infiniteIterator.next());
+// console.log(infiniteIterator.next());
+// console.log(infiniteIterator.next());
+// console.log(infiniteIterator.next());
+
+// for (const number of infiniteIterator) { // bi kmamel 3ad
+//     if (number > 20) {
+//         break;
+//     }
+//     console.log(number);
+// }
+
+
+// for (const number of createInfinite()) { //bi balesh men el 0
+// li2an enta jebet el generator mubasharatn
+//     if (number > 20) {
+//         break;
+//     }
+//     console.log(number);
+// }
 
 
 
+// //////////////////////////////////////
+// video35
+// delegating Generators // delegate : yaane mu3akeb el mu3amalet
+// hayda el shakhes li bye5od mene el ness kell mu3amaleton e bi ruh bi wasselon
+// ahsan ma yet3azabo
+
+// function* generateNumbers() {
+//     yield 1;
+//     yield 2;
+//     yield 3;
+// }
+
+// function* generateNames() {
+//     yield "osama";
+//     yield "ahmed";
+//     yield "sayed";
+// }
+
+// function* generateAll() { // hyada delegat yalli binub 3an el ba2ye
+//     yield* generateNumbers();
+//     yield* generateNames();
+// }
+
+// let genAll = generateAll(); //iterator
+// console.log(genAll.next());
+// console.log(genAll.next());
+// console.log(genAll.next());
+// console.log(genAll.next());
+// console.log(genAll.next());
+// console.log(genAll.next());
+// console.log(genAll.next());
 
 
+//________________________________________________________________________________________________
 
-
-
-
-
-
+// video36
+// New Array Methods part 1
 
 
 
