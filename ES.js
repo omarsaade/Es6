@@ -1499,6 +1499,311 @@ forEach(Value , key , Map)
 
 // video36
 // New Array Methods part 1
+// Array.of
+// Array.from
+// Array.fill
+
+// Array.of(Elements to Create The Array)
+
+// let oldArray = Array(100);
+// console.log(oldArray);// (100)[]
+// console.log(oldArray.length); //100
+
+// let newArray = Array.of(100);
+// console.log(newArray);[100]
+// console.log(newArray.length); 1
+
+
+
+
+
+// // Array.from(Iterable , Mapfn , This)
+
+// let myName = "osama";
+// let arrayOfLetters = Array.from(myName);
+
+// console.log(myName);//osama
+// console.log(arrayOfLetters);//["o","s","a","m","a"]
+
+// let myNumbers = [10, 20, 30, 15, 18, 100, 60];
+
+// let numbersMinusTen = Array.from(myNumbers, number => number - 10);
+// console.log(numbersMinusTen);//[0,10,20]
+
+
+
+
+
+// // Array.fill(Value TO Fill , start Default 0, End Default Array.length)
+
+// let theNumbers = [1, 10, 30, 70, 90];
+// // theNumbers.fill(100);//all will be 100
+// // theNumbers.fill(100, 2);//from 30
+// theNumbers.fill(100, 1, 3);//will Fill 10 And 30
+// console.log(theNumbers);
+
+
+
+/////////////////////////////////
+// video37
+// Array.find()
+//Array.findindex()
+// Array.copyWithin()
+
+
+
+
+// Array.find() Not Returning all values
+// let myNumbers1 = [1, 10, 20, 30, 40];
+// let found1 = myNumbers1.find(el => el > 10);
+// console.log(found1); //20      ITEM WEHED BAS
+
+// console.log(`${"#".repeat(20)}`);
+
+// Array.findIndex() Not Returning all Values
+
+// let myNumbers2 = [1, 10, 20, 30, 40];
+// let found2 = myNumbers2.findIndex(el => el > 20);
+// console.log(found2); //3
+
+
+//
+// Array.copywithin(Target , start Default 0 , End Default Array.length)
+
+// "A","F","G","D","E","F","G","H"
+// let myletters = ["A", "B", "C", "D", "E", "F", "G", "H"];
+// myletters.copyWithin(1, 5, 7);
+// console.log(myletters);
+
+
+
+
+
+// video38
+// Modules part1 export & import
+
+
+// const a = 1;
+// let myArray = [1, 2, 3, 4, 5, 6];
+// function sayHello(name) {
+//     return `Hello ${name}`;
+// }
+// // export meth
+
+// export { a, myArray, sayHello }
+
+// w fin nhet export edem kell wahde menon metel
+// // // export const a =1    ; w hik///////
+
+// ///////////////////////////////////////
+
+
+
+
+
+
+// video39
+// named export vs default export
+
+// named export
+// const a = 100;
+// function sayHello(name) {
+//     return `Hello ${name}`;
+// }
+// let myArray = [1, 2, 3, 4, 5];
+
+// export {
+//     a as myRank,
+//     sayHello,
+//     myArray
+// }
+
+//////////////////////////////
+
+
+
+
+
+
+
+//video40
+// named export vs default export
+
+// default export
+
+// const a = 100;
+// const b = 200;
+
+// export { a, b }
+
+// const c = 300;
+
+// export default function sayhello() {
+// return `Hello`;
+// }
+
+// const myObject = {
+// name: "Osama",
+// age: 36,
+// country: "Egypt"
+// }
+
+// export default c;
+
+/////////////////////////////////////
+
+
+
+// video41
+// Classes Part 1 old And New Syntax
+// OOP old methods
+
+
+// old oop
+// function User(name, age) {
+//     this.name = name;
+//     this.age = age;
+// }
+
+// // console.log(User.prototype);
+// User.prototype.getInfo = function () {
+//     console.log(`Hello ${this.name} your age Is ${this.age}`);
+// }
+
+// User.prototype.getDays = function () {
+//     console.log(`you lived for ${this.age * 365} Days`);
+// }
+
+// const firstUser = new User("osama", 36);
+
+// firstUser.getInfo();
+// firstUser.getDays();
+
+
+
+// //new oop
+// class User {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+//     // console.log(User.prototype);
+//     getInfo() {
+//         console.log(`Hello ${this.name} your age Is ${this.age}`);
+//     }
+//     getDays() {
+//         console.log(`you lived for ${this.age * 365} Days`);
+//     }
+// }
+
+
+
+// const firstUser = new User("osama", 36);
+
+// firstUser.getInfo();
+// firstUser.getDays();
+
+
+
+/////////////////////////////////////
+
+
+//video42
+// Extend class from module
+// class User {
+//     constructor(name, email) {
+//         this.name = name;
+//         this.email = email;
+//     }
+//     getInfo() {
+//         console.log(`Hello ${this.name} ur email is ${this.email}`);
+//     }
+// }
+// export default User;
+
+
+
+
+////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+///////////////////////// CALL BACK ///////////////////
+//////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+
+
+// video43
+// Call Stack, Web API, Event Loop, Callback Queue.
+//-Call Stack
+// Mechanism To Make Interpreter Track Your Calls
+// when you call A Function its Added to she Stack
+// When Function Executed Its Removed From The Stack
+// The Interpreter Continue Calling From The Last Point reached
+// Call stack Detect Web API and Leave It To The Browser To Handle It
+// Web API
+// Methods AVailable From Environment => Browser
+// When Complete It add to Callback to The Callback Queue
+// Event Loop
+// Wait The Call Stack To Finish
+// Get Callback From Callback Queue
+// Add Callback To Call Stack
+// Callback Queue
+
+
+//ex1
+// let i = 10;
+// let j = 20;
+// console.log(i + j);
+
+
+
+//ex2
+// function first() {
+//     console.log("hello first");
+// }
+
+// function second() {
+//     first();
+//     console.log("Hello Second");
+// }
+
+// second();
+
+
+//ex3
+// console.log("one");
+// window.setTimeout(() => console.log("Two"), 0);
+// console.log("three");
+
+
+// ex4
+// console.log(myVariable); //ES.js:1780 Uncaught ReferenceError: Cannot access 'myVariable' before initialization
+// let myVariable = 100;
+// myVariable += 200;
+
+
+// ex4.1
+// window.setTimeout(() => console.log(myVariable), 0);
+// let myVariable = 100;
+// myVariable += 200;
+
+
+// ex5
+// window.setTimeout(() => console.log("last"), 1000);
+// console.log("one");
+// window.setTimeout(() => console.log("Two"), 0);
+// console.log("Three");
+
+
+
+
+
+
+
+
+
+
+
 
 
 
