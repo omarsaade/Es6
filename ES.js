@@ -1734,7 +1734,7 @@ forEach(Value , key , Map)
 
 // video43
 // Call Stack, Web API, Event Loop, Callback Queue.
-//-Call Stack
+//-Call Stack //kawme
 // Mechanism To Make Interpreter Track Your Calls
 // when you call A Function its Added to she Stack
 // When Function Executed Its Removed From The Stack
@@ -1747,7 +1747,7 @@ forEach(Value , key , Map)
 // Wait The Call Stack To Finish
 // Get Callback From Callback Queue
 // Add Callback To Call Stack
-// Callback Queue
+// Callback Queue // tabur
 
 
 //ex1
@@ -1772,12 +1772,15 @@ forEach(Value , key , Map)
 
 //ex3
 // console.log("one");
-// window.setTimeout(() => console.log("Two"), 0);
+// window.setTimeout(() => console.log("Two"), 0);// bi sebha tethandel 3an tari2 el browser
+//  w ma elo 3ale2a fia el javscript
 // console.log("three");
+
 
 
 // ex4
 // console.log(myVariable); //ES.js:1780 Uncaught ReferenceError: Cannot access 'myVariable' before initialization
+//callstack neda heda abel ma ykun mawjud
 // let myVariable = 100;
 // myVariable += 200;
 
@@ -1789,9 +1792,9 @@ forEach(Value , key , Map)
 
 
 // ex5
-// window.setTimeout(() => console.log("last"), 1000);
+// window.setTimeout(() => console.log("last"), 1000);//web api method
 // console.log("one");
-// window.setTimeout(() => console.log("Two"), 0);
+// window.setTimeout(() => console.log("Two"), 0);//web api method
 // console.log("Three");
 
 
