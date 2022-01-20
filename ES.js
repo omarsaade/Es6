@@ -1801,10 +1801,165 @@ forEach(Value , key , Map)
 
 
 // video44
+// Asychronous(mesh metzemen(mafi shi mertebet bel tene))
+// Vs
+//  Synchronous Programming(motazamen)
+// lezem te5las el awle la ya3mul el tenye
 
 
 
-//7all
+// asy : yaane byena3mal kelshi ma3 baad (facebook lama ya3mul load
+// la suwar w comments w text w kelo bi zet el wa2et) (fetch w ajax...)
+
+
+
+// SYn : yaane ma byena3mal kelshi ma3 baad , bisir fi te25ir
+//w osas (li bado yehjoz ticket lal metro byu2af bel saf w byentor)
+
+
+
+
+// video 45
+// ECMASCript 6
+// promises (intro and discussions)
+// create promise
+// resolve and reject are a handlers
+// eh resolve , la2 reject
+// succ , failed
+// fullfilled , Rejected
+// jawet el new promise fi shi esmo excuter function
+
+
+
+
+
+// Example
+//////////////////////////////////////////////////////////////////////
+// const myPromise = new Promise((resolve, reject) => {
+
+//         //////////////juwa el promise te3na
+//     ////// console.log("welcome to my first Promise");//note
+//     ////// Asynchronous Operation//note
+//     // //fullfiled => Resolve //note
+//     // ///Rejected => reject//note
+
+//     let connect = true;
+//     if (connect) {
+//         resolve("connection Estabilshed");
+//     } else {
+//         reject(Error("Connection failed"));
+//     }
+
+// });
+
+// // console.log(typeof myPromise); //note
+
+
+// //syntax
+// myPromise.then(                     // then hye method bte5od 2 functions
+//                              //hye li bta3mul handle bine2an iza el wa3ed t7a2a2 aw la2
+//     (resolved) => console.log(resolved),   ///funct1
+//     (rejected) => console.log(rejected)    //////funct2
+// );
+////////////////////////////////////////////////////////////////////
+
+//another syntax
+//more clean shway
+// const theResolved = resolved => console.log(resolved);
+// const therejected = rejected => console.log(rejected);
+
+// myPromise.then(theResolved, therejected);
+//////////////////////////////////////////////////////////////////////
+
+
+//another big syntax
+//estabilished
+// const myPromise = new Promise((resolve, reject) => {
+//     let connect = true; // example
+//     if (connect) {
+//         resolve("connection Estabilshed");
+//     } else {
+//         reject(Error("Connection failed"));
+//     }
+
+// }).then(
+//     (resolved) => console.log(resolved),
+//     (rejected) => console.log(rejected),
+// );
+
+// ////////////////////////////////////////////////////////////////////
+
+
+
+
+// video47
+//promise
+
+// const myPromise = new Promise((resolve, reject) => {
+//     //////  resolve("Resolved");//true
+//     ////// reject("Rejected");// Ignored
+//     if (Math.random() * 100 < 50) {
+//         resolve("Good");
+//     } else {
+//         reject("Bad");
+//     }
+
+// });
+// myPromise.then(
+//     (resolved) => console.log(resolved),
+//     (rejected) => console.log(rejected),
+// );
+// myPromise.then(null, (rejected) => console.log(rejected),
+// );
+
+// // myPromise.catch((rejected) => console.log(rejected));
+
+
+// firstRequest(function (response) {
+//     secondRequest(response, function (nextResponse) {
+//         thirdRequest(nextResponse, function (finalResponse) {
+//             console.log(`Final response:` + finalResponse);
+//         }, failureCallback);
+
+//     }, failureCallback);
+
+// }, failureCallback);
+
+
+///////////////////////////
+//new syntax
+
+// firstRequest()
+
+//     .then(function (response) {
+//         return secondRequest(response);
+
+//     }).then(function (nextResponse) {
+//         return thirdRequest(nextResponse);
+
+//     }).then(function (finalResponse) {
+//         console.log(`Final response: ` + finalResponse);
+
+//     }).catch(failureCallback);
+
+// es6
+
+// firstRequest()
+
+//     .then((response) => secondRequest(response))
+//     .then((nextResponse) => thirdRequest(nextResponse))
+//     .then((finalResponse) => console.log(`Final response: ` + finalResponse))
+//     .catch(failureCallback);
+
+
+
+
+
+
+
+
+
+
 
 
 
