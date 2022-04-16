@@ -1952,6 +1952,9 @@ forEach(Value , key , Map)
 //     .catch(failureCallback);
 
 
+// video48
+// Promise abd XMLHTTPRequest
+
 
 
 
